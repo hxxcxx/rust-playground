@@ -6,5 +6,5 @@ debug/
 *.iml
 .DS_Store
 Thumbs.db
-
+*.png
 # Cargo.lock
