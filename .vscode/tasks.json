@@ -1,0 +1,96 @@
+{
+    // ============================================================
+    // Rust 任务配置
+    // 快捷键：
+    //   Ctrl+Shift+B  → 跑默认构建任务 (cargo build)
+    //   命令面板 "Run Task" 可选其他任务
+    // ============================================================
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cargo build (整个 workspace)",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "cargo test (整个 workspace)",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "test"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "cargo clippy (整个 workspace)",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "clippy",
+                "--all-targets",
+                "--",
+                "-D",
+                "warnings"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "cargo fmt (格式化整个 workspace)",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "fmt",
+                "--all"
+            ]
+        },
+        {
+            "label": "cargo run scratch",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                "-p",
+                "scratch"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "presentation": {
+                "clear": true,
+                "reveal": "always",
+                "focus": true
+            }
+        }
+    ]
+}

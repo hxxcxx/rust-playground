@@ -1,0 +1,71 @@
+{
+    // ============================================================
+    // Rust 调试配置 (CodeLLDB)
+    // 调试入口：
+    //   1. 代码上方 rust-analyzer 的 "Run | Debug" code lens（最常用）
+    //   2. F5 启动 "调试：选择 package"（弹出输入框）
+    //   3. 选 "调试：当前文件所在的 crate"（自动定位）
+    // ============================================================
+    "version": "0.2.0",
+    "inputs": [
+        {
+            "id": "pkgName",
+            "type": "promptString",
+            "description": "输入要调试的 package 名（如 scratch / ch01_intro / ch04_ownership ...）",
+            "default": "scratch"
+        }
+    ],
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "调试：选择 package",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--package=${input:pkgName}",
+                    "--bins"
+                ],
+                "filter": {
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "program": "${cargo:program}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "调试：当前文件所在的 crate",
+            "cargo": {
+                "args": [
+                    "build"
+                ],
+                "filter": {
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "program": "${cargo:program}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "调试：scratch（一键）",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--package=scratch"
+                ],
+                "filter": {
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "program": "${cargo:program}"
+        }
+    ]
+}

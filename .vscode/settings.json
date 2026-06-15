@@ -1,0 +1,42 @@
+{
+    // ============================================================
+    // rust-analyzer + Rust 编辑体验配置
+    // ============================================================
+    // --- rust-analyzer 核心 ---
+    // 保存即跑 clippy（比 cargo check 更严格），错误会显示在 Problems 面板
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.check.allTargets": true,
+    // 明确指定 workspace 根（多 crate workspace 必备）
+    "rust-analyzer.linkedProjects": [
+        "Cargo.toml"
+    ],
+    // cargo 调用时的特性
+    "rust-analyzer.cargo.features": "all",
+    "rust-analyzer.cargo.runBuildScripts": true,
+    // --- Inlay Hints（内联提示）—— 学 Rust 极其有用，能看到类型推导、生命周期、参数名 ---
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+    "rust-analyzer.inlayHints.chainingHints.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+    // --- 保存时格式化（rustfmt）---
+    "editor.formatOnSave": true,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+    // --- rust-analyzer 行为细节 ---
+    "rust-analyzer.assist.importGranularity": "crate",
+    "rust-analyzer.diagnostics.experimental.enable": true,
+    "rust-analyzer.signatureInfo.detail": "full",
+    "rust-analyzer.signatureInfo.documentation.enable": true,
+    "rust-analyzer.completion.callable.snippets": "fill_arguments",
+    "rust-analyzer.workspace.symbol.search.scope": "workspace_and_dependencies",
+    // --- CodeLLDB 调试小优化 ---
+    "lldb.displayFormat": "auto",
+    "lldb.showDisassembly": "never",
+    "lldb.dereferencePointers": true,
+    "lldb.consoleMode": "commands"
+}

@@ -1,0 +1,27 @@
+# Rust 学习 workspace —— 跟随 cppguide《Rust编程指南》
+# 新增章节：cargo new chapters/ch06_xxx --name ch06_xxx，再把路径加到 members
+
+[workspace]
+resolver = "2"
+members = [
+    "scratch",
+    "chapters/ch01_intro",
+    "chapters/ch02_overview",
+    "chapters/ch03_basic_types",
+    "chapters/ch04_ownership",
+    "chapters/ch05_references",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"     # Rust 2024 edition
+authors = ["hxxcxx"]
+license = "MIT"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "warn"
+unused = "allow"     # 学习时允许半成品代码
+
+[workspace.lints.clippy]
+all = "warn"
