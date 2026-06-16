@@ -21,7 +21,7 @@ publish = false
 
 [workspace.lints.rust]
 unsafe_code = "warn"
-unused = "allow"     # 学习时允许半成品代码
+unused = { level = "allow", priority = -1 } # 学习时允许半成品代码
 
 [workspace.lints.clippy]
 all = "warn"
