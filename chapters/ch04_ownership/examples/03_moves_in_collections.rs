@@ -104,7 +104,10 @@ fn option_take_pattern() {
     let first_name = composers[0].name.take();
     assert_eq!(first_name, Some("Palestrina".to_string()));
     assert_eq!(composers[0].name, None);
-    println!("take 后：first_name = {first_name:?}, composers[0].name = {:?}", composers[0].name);
+    println!(
+        "take 后：first_name = {first_name:?}, composers[0].name = {:?}",
+        composers[0].name
+    );
 }
 
 fn main() {

@@ -9,7 +9,7 @@
 //!
 //! 运行：`cargo run -p ch04_ownership --example 04_copy_types`
 
-use ch04_ownership::{section, Label};
+use ch04_ownership::{Label, section};
 
 /// 演示：`String`（非 Copy）会移动；`i32`（Copy）会复制。
 fn string_vs_i32() {
