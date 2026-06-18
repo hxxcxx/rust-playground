@@ -61,7 +61,10 @@ fn shared_subtree() {
     // leaf 不会在 parent_a / parent_b 任一离开作用域时被释放；
     // 只有两者都 drop 后，引用计数归零，leaf 才会被释放。
     drop(parent_a);
-    println!("drop(parent_a) 后 leaf strong_count = {}", Rc::strong_count(&leaf));
+    println!(
+        "drop(parent_a) 后 leaf strong_count = {}",
+        Rc::strong_count(&leaf)
+    );
     drop(parent_b);
     // 此时 leaf 也被释放（不能再访问 leaf）
 }
@@ -76,7 +79,10 @@ fn arc_across_threads() {
         let a_clone = Arc::clone(&a); // 原子地增加引用计数
         handles.push(thread::spawn(move || {
             // 每个线程都能安全地只读访问同一份 Vec
-            println!("线程看到: {a_clone:?}, sum = {}", a_clone.iter().sum::<i32>());
+            println!(
+                "线程看到: {a_clone:?}, sum = {}",
+                a_clone.iter().sum::<i32>()
+            );
         }));
     }
     for h in handles {

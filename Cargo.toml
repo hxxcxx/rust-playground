@@ -10,6 +10,7 @@ members = [
     "chapters/ch03_basic_types",
     "chapters/ch04_ownership",
     "chapters/ch05_references",
+    "chapters/ch06_expressions",
 ]
 
 [workspace.package]
