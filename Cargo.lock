@@ -475,6 +475,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch08_crates_modules"
+version = "0.1.0"
+
+[[package]]
 name = "chacha20"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
