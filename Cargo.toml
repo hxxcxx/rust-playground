@@ -16,6 +16,7 @@ members = [
     "chapters/ch09_structs",
     "chapters/ch10_enums_patterns",
     "chapters/ch11_traits_and_generics",
+    "chapters/ch12_operator_overloading",
 ]
 
 [workspace.package]
