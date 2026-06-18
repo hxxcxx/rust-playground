@@ -11,6 +11,7 @@ members = [
     "chapters/ch04_ownership",
     "chapters/ch05_references",
     "chapters/ch06_expressions",
+    "chapters/ch07_errors",
 ]
 
 [workspace.package]

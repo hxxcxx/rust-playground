@@ -1,0 +1,14 @@
+[package]
+name = "ch07_errors"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+# thiserror: 用 derive 宏自动实现 std::error::Error trait
+thiserror = "2"
