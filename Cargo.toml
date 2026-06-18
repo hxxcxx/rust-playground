@@ -13,6 +13,7 @@ members = [
     "chapters/ch06_expressions",
     "chapters/ch07_errors",
     "chapters/ch08_crates_modules",
+    "chapters/ch09_structs",
 ]
 
 [workspace.package]
