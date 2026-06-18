@@ -14,6 +14,7 @@ members = [
     "chapters/ch07_errors",
     "chapters/ch08_crates_modules",
     "chapters/ch09_structs",
+    "chapters/ch10_enums_patterns",
 ]
 
 [workspace.package]

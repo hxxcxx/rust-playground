@@ -483,6 +483,10 @@ name = "ch09_structs"
 version = "0.1.0"
 
 [[package]]
+name = "ch10_enums_patterns"
+version = "0.1.0"
+
+[[package]]
 name = "chacha20"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
