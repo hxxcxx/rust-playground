@@ -495,6 +495,10 @@ name = "ch12_operator_overloading"
 version = "0.1.0"
 
 [[package]]
+name = "ch13_utility_traits"
+version = "0.1.0"
+
+[[package]]
 name = "chacha20"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
