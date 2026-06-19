@@ -20,6 +20,7 @@ members = [
     "chapters/ch13_utility_traits",
     "chapters/ch14_closures",
     "chapters/ch15_iterators",
+    "chapters/ch16_collections",
 ]
 
 [workspace.package]
