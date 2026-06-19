@@ -499,6 +499,10 @@ name = "ch13_utility_traits"
 version = "0.1.0"
 
 [[package]]
+name = "ch14_closures"
+version = "0.1.0"
+
+[[package]]
 name = "chacha20"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

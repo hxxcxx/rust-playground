@@ -18,6 +18,7 @@ members = [
     "chapters/ch11_traits_and_generics",
     "chapters/ch12_operator_overloading",
     "chapters/ch13_utility_traits",
+    "chapters/ch14_closures",
 ]
 
 [workspace.package]
