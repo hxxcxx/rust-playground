@@ -22,6 +22,7 @@ members = [
     "chapters/ch15_iterators",
     "chapters/ch16_collections",
     "chapters/ch17_strings_text",
+    "chapters/ch18_io",
 ]
 
 [workspace.package]
