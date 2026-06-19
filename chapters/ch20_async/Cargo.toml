@@ -1,0 +1,19 @@
+[package]
+name = "ch20_async"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+# tokio：事实标准的异步运行时。
+# - rt-multi-thread：多线程运行时（tokio::main 默认用）。
+# - macros：#[tokio::main] / #[tokio::test] / select! 等宏。
+# - time：异步定时器（sleep/interval）。
+# - sync：异步同步原语（mpsc channel / Mutex / Notify）。
+# - rt：运行时本身。
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync", "rt"] }
